@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from cart import views as cart_views
+
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    # url(r'^admin/', admin.site.urls),
+
+    url(r'^cart/edit/', cart_views.edit),
+    url(r'^cart/create/', cart_views.create),
+    url(r'^cart/read/', cart_views.read),
+    url(r'^cart/list/', cart_views.list),
+    url(r'^cart/search/', cart_views.search),
 ]
